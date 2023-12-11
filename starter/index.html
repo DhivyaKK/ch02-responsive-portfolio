@@ -1,45 +1,91 @@
 <!DOCTYPE html>
 <html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lernantino // Web Developer</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lernantino // Web Developer</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+  <body>
+    <!-- main logo / nav -->
+    <header class="menu">
+      <h1>Dhivya</h1>
+      <nav>
+        <a href="#about">About Me</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact Me</a>
+        <a>Resume</a>
+      </nav>
+    </header>
 
-<body>
-  <!-- main logo / nav -->
-  <header>
-    <h1>Lernantino</h1>
-    <nav>
-    </nav>
-  </header>
-
-  <!-- hero banner -->
-  <section class="hero-banner">
-    <div>
-      <h2>Cool subtitle here!</h2>
-    </div>
-  </section>
-
-  <main class="page-wrapper">
-    <!-- about me -->
-    <section class="page-section" id="about">
-      <h2>About Me</h2>
+    <!-- hero banner -->
+    <section class="hero-banner">
+      <div>
+        <h2>Cool subtitle here!</h2>
+      </div>
     </section>
 
-    <!-- portfolio container -->
-    <section class="page-section" id="work">
-      <h2>Work</h2>
-    </section>
+    <main class="page-wrapper">
+      <!-- about me -->
+      <div class="row">
+        <section class="page-section" id="about">
+          <h2>About Me</h2>
+        </section>
 
-    <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
-    </section>
-  </main>
-</body>
+        <div class="column">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            reprehenderit non quia cum possimus aliquam ad pariatur quod fuga!
+            Id eligendi ipsam quis explicabo, ullam reprehenderit fugiat veniam
+            nihil necessitatibus.
+            <br /><br />
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            reprehenderit non quia cum possimus aliquam ad pariatur quod fuga!
+            Id eligendi ipsam quis explicabo, ullam reprehenderit fugiat veniam
+            nihil necessitatibus.
+          </p>
+        </div>
+      </div>
+      <!-- portfolio container -->
+      <div class="row">
+        <section class="page-section" id="work">
+          <h2>Work</h2>
+        </section>
 
+        <div class="column">
+          <div class="row">
+            <section class="img1-surf">
+              <h2>Surf Report <span class="img1-surf-h6">MERN Stack</span></h2>
+            </section>
+          </div>
+          <div class="row">
+            <img src="./images/02-portfolio-3.jpg" width="50%" />
+            <img src="./images/02-run-buddy.jpg" width="50%" />
+          </div>
+          <div class="row">
+            <img src="./images/02-portfolio-3.jpg" width="50%" />
+            <img src="./images/02-run-buddy.jpg" width="50%" />
+          </div>
+        </div>
+      </div>
+      <!-- contact -->
+      <div class="row">
+        <section class="page-section contact" id="contact">
+          <h2>Contact Me</h2>
+        </section>
+
+        <div class="column">
+          <div class="footer">
+            <a href="#">555.555.555</a>
+            <a href="#">dhivya@website.com</a>
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+            <a href="#">Spotify</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

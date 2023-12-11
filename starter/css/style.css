@@ -1,3 +1,7 @@
+:root {
+  --aqua: #00ffffa3;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,12 +9,126 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   line-height: 1.5;
 }
 
-h1,
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 75px;
+  background-color: rgba(79, 81, 83, 0.911);
+}
+
+/* nav{
+ width: 50%;
+ display: flex;
+ justify-content: right;
+ margin-right: 100px;
+} */
+
+.menu nav {
+  display: flex;
+
+  margin-right: 50px;
+}
+
+.menu a {
+  display: inline;
+  border-bottom-style: solid;
+  text-decoration: none;
+  color: var(--aqua);
+  font-family: arial;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.menu h1 {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  background-color: var(--aqua);
+  color: rgba(79, 81, 83, 0.911);
+}
+
+.hero-banner {
+  background-image: url("../images/02-hero-bg.jpg");
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.hero-banner h2 {
+  background-color: var(--aqua);
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
 h2,
+.page-wrapper {
+  display: flex;
+  margin-right: 15px;
+  flex-direction: column;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch; */
+  /* grid-template-columns: 0.4fr 0.7fr;
+ gap: 20px 10px; */
+}
+
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.page-section {
+  display: flex;
+  justify-content: flex-end;
+  background-color: blue;
+  width: 25%;
+  border-right: solid;
+  margin-bottom: 10px;
+}
+
+.page-section h2 {
+  height: 200px;
+}
+
+.flex-align {
+  display: flex;
+}
+
+.space-left {
+  margin-left: 10px;
+}
+
+#contact {
+  /* grid-column: 1/2;
+ grid-row: 3/4; */
+}
+
+/*continue the footer design here*/
+
+.footer a {
+}
+
 h3,
 h4,
 h5,
@@ -20,4 +138,24 @@ h6 {
 
 p {
   margin: 0;
+}
+
+.img1-surf {
+  background-image: url("../images/02-portfolio-4.jpg");
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  border: 5px solid #00ffffa3;
+  margin: 0px 15px 10px 5px;
+}
+
+.img1-surf h2 {
+  background-color: #00ffffa3;
+}
+
+.img1-surf-h6 {
+  font-size: 12px;
 }
