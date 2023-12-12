@@ -1,3 +1,4 @@
+/*declare css global variables*/
 :root {
   --aqua: #00ffffa3;
   --primary-color: rgba(79, 81, 83, 0.911);
@@ -46,6 +47,18 @@ body {
   width: 25%;
   background-color: var(--aqua);
   color: rgba(79, 81, 83, 0.911);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 .hero-banner {
@@ -103,21 +116,21 @@ body {
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-start;
-  border: 5px solid #00ffffa3;
+  border: 5px solid rgba(79, 81, 83, 0.911);
   margin: 0px 15px 10px 0px;
 }
 
-/*background-size to scale over content area */
+/*to scale on hover the content-images */
+.work-container:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
 .work-div1 {
   background-image: url("../images/02-portfolio-4.jpg");
   height: 500px;
   background-size: cover;
-}
-
-/* highlight the image on mouse hover using opacity*/
-.work-div1:hover {
-  opacity: 0.7;
-  cursor: pointer;
 }
 
 .work-div2 {
@@ -126,20 +139,10 @@ body {
   background-size: cover;
 }
 
-.work-div2:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
-
 .work-div3 {
   background-image: url("../images/02-portfolio-2.jpg");
   height: 150px;
   background-size: cover;
-}
-
-.work-div3:hover {
-  opacity: 0.7;
-  cursor: pointer;
 }
 
 .work-div4 {
@@ -147,19 +150,11 @@ body {
   height: 150px;
   background-size: cover;
 }
-.work-div4:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
 
 .work-div5 {
   background-image: url("../images/02-run-buddy.jpg");
   height: 150px;
   background-size: cover;
-}
-.work-div5:hover {
-  opacity: 0.7;
-  cursor: pointer;
 }
 
 .float-text {
@@ -178,7 +173,6 @@ body {
 /*continue the footer design here*/
 
 .footer {
- 
   margin-top: 20px;
 }
 
@@ -196,17 +190,7 @@ body {
   font-size: 16px;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
 
-p {
-  margin: 0;
-}
 
 /* media query for smartphones to tablet screen size*/
 @media screen and (min-width: 320px) and (max-width: 1024px) {
