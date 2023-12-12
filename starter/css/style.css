@@ -20,9 +20,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;
   height: 75px;
   background-color: rgba(79, 81, 83, 0.911);
+  width: 100%;
 }
 
 .menu nav {
@@ -42,7 +42,7 @@ body {
 
 .menu h1 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   width: 25%;
   background-color: var(--aqua);
   color: rgba(79, 81, 83, 0.911);
@@ -55,7 +55,8 @@ body {
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-end;
- margin-bottom: 20px;
+  margin-bottom: 20px;
+  background-size: cover;
 }
 
 .hero-banner h2 {
@@ -63,7 +64,6 @@ body {
   display: flex;
   align-items: center;
   margin-right: 25px;
-  
 }
 
 .page-wrapper {
@@ -71,36 +71,31 @@ body {
   flex-direction: column;
 }
 
-.p-style{
-  margin: 20px;
-}
-
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex: 1;
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  flex: 2;
- 
+  flex-basis: 100%;
+  flex: 1;
+  margin-top: 10px;
 }
 
 .page-section {
   display: flex;
   justify-content: flex-end;
   width: 25%;
-  border-right: solid;  
-  margin-bottom: 50px;
+  border-right: solid;
+  margin: 20px;
   padding: 10px;
 }
 
 .page-section h2 {
   height: 200px;
- 
 }
 
 .work-container {
@@ -109,17 +104,18 @@ body {
   align-items: flex-end;
   justify-content: flex-start;
   border: 5px solid #00ffffa3;
-  margin: 0px 15px 10px 25px;
- 
+  margin: 0px 15px 10px 0px;
 }
 
+/*background-size to scale over content area */
 .work-div1 {
   background-image: url("../images/02-portfolio-4.jpg");
   height: 500px;
-  width: 100%;
+  background-size: cover;
 }
 
-.work-div1:hover{
+/* highlight the image on mouse hover using opacity*/
+.work-div1:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -127,9 +123,10 @@ body {
 .work-div2 {
   background-image: url("../images/02-portfolio-1.jpg");
   height: 150px;
+  background-size: cover;
 }
 
-.work-div2:hover{
+.work-div2:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -137,9 +134,10 @@ body {
 .work-div3 {
   background-image: url("../images/02-portfolio-2.jpg");
   height: 150px;
+  background-size: cover;
 }
 
-.work-div3:hover{
+.work-div3:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -147,8 +145,9 @@ body {
 .work-div4 {
   background-image: url("../images/02-portfolio-3.jpg");
   height: 150px;
+  background-size: cover;
 }
-.work-div4:hover{
+.work-div4:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -156,8 +155,9 @@ body {
 .work-div5 {
   background-image: url("../images/02-run-buddy.jpg");
   height: 150px;
+  background-size: cover;
 }
-.work-div5:hover{
+.work-div5:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -175,19 +175,15 @@ body {
   font-size: 10px;
 }
 
-
 /*continue the footer design here*/
 
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap; 
+ 
   margin-top: 20px;
 }
 
 .contact {
-  height: 75px;  
+  height: 75px;
   margin-top: 20px;
 }
 
@@ -195,10 +191,9 @@ body {
   display: inline;
   border-bottom-style: solid;
   text-decoration: none;
-  margin: 10px 100px 0px 20px;
+  margin-right: 20px;
   color: var(--primary-color);
-  font-size: 20px;
-  
+  font-size: 16px;
 }
 
 h2,
@@ -211,4 +206,63 @@ h6 {
 
 p {
   margin: 0;
+}
+
+/* media query for smartphones to tablet screen size*/
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .menu {
+    height: 125px;
+    display: block;
+    text-align: center;
+  }
+  .menu h1 {
+    width: 100%;
+    display: block;
+  }
+
+  .menu nav {
+    display: block;
+    text-align: center;
+  }
+
+  .page-wrapper {
+    display: block;
+  }
+
+  .page-section {
+    display: block;
+    height: 75px;
+    width: 100%;
+    border-bottom: solid;
+    border-right: none;
+    font-size: 30px;
+  }
+
+  .column {
+    margin-left: 20px;
+  }
+}
+
+/*media query to fit the display for smart phones only*/
+@media screen and (max-width: 420px) {
+  .column {
+    display: block;
+    width: 100%;
+  }
+
+  .row {
+    display: block;
+    width: 100%;
+  }
+
+  .work-div1 {
+    height: 150px;
+  }
+
+  .footer a {
+    display: block;
+    margin: 10px;
+    border-bottom-style: none;
+    text-decoration: underline;
+  }
 }
